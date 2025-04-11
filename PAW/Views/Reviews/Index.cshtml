@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PAW.Models.Review>
+
+@{
+    ViewData["Title"] = "All Reviews - Gamer's Heaven";
+    Layout = "_Layout";
+}
+
+<section class="reviews-section">
+    <h1>All Reviews</h1>
+
+    @if (!Model.Any())
+    {
+        <p>No reviews have been submitted yet.</p>
+    }
+    else
+    {
+        <table class="review-table">
+            <thead>
+                <tr>
+                    <th>Game ID</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var review in Model)
+                {
+                    <tr>
+                        <td>@review.GameID</td>
+                        <td>@review.Rating ★</td>
+                        <td>@review.Comment</td>
+                        <td>@review.Date.ToString("g")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</section>

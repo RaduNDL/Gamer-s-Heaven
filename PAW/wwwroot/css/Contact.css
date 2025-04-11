@@ -1,0 +1,147 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ... (Your other CSS remains the same) ... */
+
+form {
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, #0f3460, #16213e); /* Match game-card gradient */
+    padding: 4rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    form input[name="Name"],
+    form input[type="email"],
+    form textarea {
+        width: calc(50% - 2rem);
+        padding: 2rem;
+        margin: 1.5rem 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: white; /* White background for input fields */
+        color: #333; /* Dark text for readability on white background */
+        border-radius: 12px;
+        box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.6);
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        form input[name="Name"]:focus,
+        form input[type="email"]:focus,
+        form textarea:focus {
+            border-color: #e94560; /* Match highlight color */
+            box-shadow: inset 0 4px 10px rgba(233, 69, 96, 0.7);
+        }
+
+details form input[name="Name"],
+details form input[type="email"],
+details form textarea {
+    width: calc(100% - 2rem);
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: white; /* White background for input fields */
+    color: #333; /* Dark text for readability on white background */
+    border-radius: 12px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    details form input[name="Name"]:focus,
+    details form input[type="email"]:focus,
+    details form textarea:focus {
+        border-color: #e94560; /* Match highlight color */
+        box-shadow: inset 0 4px 10px rgba(233, 69, 96, 0.7);
+    }
+
+textarea {
+    width: calc(100% - 2rem);
+    height: 300px;
+}
+
+form button[type="submit"] {
+    background: #007bff; /* Match button color */
+    border: none;
+    color: white;
+    padding: 2.5rem 5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    margin: 3.5rem auto;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4); /* Match button color shadow */
+    transition: background-color 0.3s ease;
+}
+
+    form button[type="submit"]:hover {
+        background-color: #0056b3; /* Match button hover color */
+    }
+
+.message-container {
+    background: linear-gradient(135deg, #0f3460, #16213e); /*match game card gradient*/
+    backdrop-filter: blur(15px);
+    padding: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    .message-container strong {
+        color: #e94560; /* Highlight color */
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+
+    .message-container small {
+        display: block;
+        margin-bottom: 1.5rem;
+        color: #aaa;
+        letter-spacing: 0.05em;
+    }
+
+    .message-container p {
+        margin-top: 1.5rem;
+        line-height: 2.2;
+    }
+
+details {
+    margin-top: 3rem;
+}
+
+    details summary {
+        color: #e94560; /* Highlight color */
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+
+    details form {
+        margin-top: 2.5rem;
+    }
+
+.message-container form button[type="submit"] {
+    background: #007bff; /* Match button color */
+    border: none;
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4); /* Match button color shadow */
+    transition: background-color 0.3s ease;
+}
+
+    .message-container form button[type="submit"]:hover {
+        background-color: #0056b3; /* Match button hover color */
+    }

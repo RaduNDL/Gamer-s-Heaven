@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PAW.Models.Game>
+
+@{
+    ViewData["Title"] = "Home - Gamer's Heaven";
+    Layout = "_Layout";
+}
+
+<section id="home" class="banner">
+    <h1>Welcome to Gamer's Heaven</h1>
+    <p>The latest news, reviews, and discussions on your favorite games.</p>
+</section>
+
+<section id="games" class="game-gallery">
+    <h2>Top Games</h2>
+    <div class="games-container">
+        @foreach (var game in Model)
+        {
+            <div class="game-card">
+                <a asp-controller="Games" asp-action="Details" asp-route-id="@game.GameID">
+               <img src="@(game.ImageFileName)" alt="@game.Title" />
+                </a>
+                <h3>@game.Title</h3>
+                <button class="add-to-cart">Add to Cart</button>
+                <span class="favorite-star" data-game="@game.GameID">&#9734;</span>
+            </div>
+        }
+    </div>
+</section>
+
+<section id="news" class="news-section">
+    <h2>Latest Gaming News</h2>
+    <p>Stay up-to-date with the hottest gaming trends, announcements, and updates.</p>
+    <a asp-controller="News" asp-action="Index" class="read-more">Explore News</a>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? Reach out to us at <a href="mailto:support@gamersheaven.com">support@gamersheaven.com</a>.</p>
+    <a asp-controller="Contact" asp-action="Index" class="contact-button">Contact Form</a>
+</section>
+
+@section Scripts {
+    <script src="~/js/home.js"></script>
+    <script src="~/js/games.js"></script>
+    <script src="~/js/Cart.js"></script>
+    <script src="~/js/Favorites.js" asp-append-version="true"></script>
+
+}

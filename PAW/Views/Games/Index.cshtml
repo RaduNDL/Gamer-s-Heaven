@@ -1,0 +1,34 @@
+﻿@model IEnumerable<PAW.Models.Game>
+@{
+    ViewData["Title"] = "Games - Gamer's Heaven";
+    Layout = "_Layout";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/AddToCartDetailsGames.css" />
+
+}
+<section class="game-gallery">
+    <h2>All Games</h2>
+    <div class="games-container">
+        @foreach (var game in Model)
+        {
+            <div class="game-card">
+                <a asp-controller="Games" asp-action="Details" asp-route-id="@game.GameID">
+                    <img src="@game.ImageFileName" alt="@game.Title" />
+                </a>
+
+                <h3>@game.Title</h3>
+                <p class="price">$@game.Price</p>
+                <span class="favorite-star" data-game="@game.GameID">&#9734;</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        }
+    </div>
+
+    @section Scripts {
+        <script src="~/js/Cart.js" asp-append-version="true"></script>
+        <script src="~/js/Favorites.js" asp-append-version="true"></script>
+    }
+
+</section>

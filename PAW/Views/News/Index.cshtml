@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "News - Gamer's Heaven";
+    Layout = "_Layout";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/News.css" asp-append-version="true" />
+}
+
+<section class="news">
+    <h1>Latest Gaming News</h1>
+    <div class="news-container">
+
+        <div class="news-card">
+            <img src="/images/gtaVI.jpg" alt="gtaVI" />
+            <h2>gtaVI Announced</h2>
+            <p>Bethesda has announced a major expansion for Starfield set to release later this year.</p>
+        </div>
+
+        <div class="news-card">
+            <img src="/images/stranding2.jpg" alt="Stranding 2" />
+            <h2>Stranding 2 Gameplay Trailer Drops</h2>
+            <p>Fans get a first look at gameplay for Stranding 2 — it's weirder than ever.</p>
+        </div>
+
+        <div class="news-card">
+            <img src="/images/fifa26.jpg" alt="FIFA 26" />
+            <h2>EA FC 26 Will Feature Crossplay</h2>
+            <p>EA confirms that the next entry in their football franchise will support full cross-platform play.</p>
+        </div>
+
+    </div>
+</section>

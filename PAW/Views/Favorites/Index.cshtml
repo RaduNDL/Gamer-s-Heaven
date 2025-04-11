@@ -1,0 +1,38 @@
+﻿@model PAW.Models.WishList
+
+@{
+    ViewData["Title"] = "Favorites - Gamer's Heaven";
+    Layout = "_Layout";
+}
+
+<main>
+    <section class="favorites">
+        <h2>Your Wishlist</h2>
+        <div class="favorites-container">
+            @if (!Model.WishListItems.Any())
+            {
+                <p>Your wishlist is empty 😢</p>
+            }
+            else
+            {
+                foreach (var item in Model.WishListItems)
+                {
+                    <div class="game-card">
+                        <img src="@item.Game.ImageFileName" alt="@item.Game.Title" />
+                        <h3>@item.Game.Title</h3>
+                        <p>$@item.Game.Price</p>
+
+                        <form asp-action="RemoveFromWishlist" method="post">
+                            <input type="hidden" name="wishListItemId" value="@item.WishListItemID" />
+                            <button type="submit">Remove</button>
+                        </form>
+                    </div>
+                }
+            }
+        </div>
+    </section>
+</main>
+
+@section Scripts {
+    <script src="~/js/Favorites.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,38 @@
+﻿@model PAW.Models.Game
+
+@{
+    ViewData["Title"] = @Model.Title;
+    Layout = "_Layout";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/games.css" />
+    <link rel="stylesheet" href="~/css/GameDetails.css" />
+
+}
+
+
+<main class="game-gallery">
+    <div class="game-details">
+        <img id="game-image" src="@Model.ImageFileName" alt="@Model.Title" asp-append-version="true" />
+        <div class="game-info">
+            <h2 id="game-name">@Model.Title</h2>
+            <p class="price" id="game-price">$@Model.Price</p>
+            <p class="description" id="game-description">@Model.Description</p>
+
+            <button id="add-to-cart-direct" data-gameid="@Model.GameID">Add to Cart</button>
+
+        </div>
+    </div>
+
+    <div class="reviews">
+        <h2>Reviews</h2>
+        <div class="review-list" id="review-list"></div>
+        <textarea id="review-text" placeholder="Write a review..."></textarea>
+        <button id="submit-review">Submit Review</button>
+    </div>
+</main>
+
+@section Scripts {
+    <script src="~/js/GameDetailsCart.js" asp-append-version="true"></script>
+}
+

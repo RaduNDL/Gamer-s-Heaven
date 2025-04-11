@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a;
+    color: white;
+    overflow-x: hidden;
+}
+p{
+    color: black;
+}
+
+header {
+    background: linear-gradient(90deg, #0f3460, #1a1a2e);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    animation: slideDown 1s ease-in-out;
+}
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.game-details {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+.game-details img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.game-info {
+    flex: 1;
+}
+
+.game-info h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.game-info .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+#add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.game-info .description {
+    margin-bottom: 20px;
+}
+
+.reviews {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.reviews h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.review-list {
+    margin-bottom: 20px;
+}
+
+#review-text {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#submit-review {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-review:hover {
+    background-color: #3e8e41;
+}
+
+
+@media (max-width: 768px) {
+    .game-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-details img {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+.description {
+    color: black;
+}
+.favorite-star {
+    cursor: pointer;
+    font-size: 24px;
+    color: gray;
+    transition: color 0.3s;
+}
+
+.favorite-star.favorited {
+    color: gold;
+}

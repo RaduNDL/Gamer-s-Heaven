@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gamer's Heaven</title>
+
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <header>
+        <div class="profile-menu">
+            <img src="~/images/profil.jpg" alt="Profile" class="profile-icon" id="profileIcon">
+            <p id="profile-username">Radu</p>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="/Profile">View Profile</a>
+                <a href="/Settings">Settings</a>
+                <a href="/Favorites">Favorites</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+
+        <div class="logo">Gamer's Heaven</div>
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Games" asp-action="Index">Games</a></li>
+                <li><a asp-controller="News" asp-action="Index">News</a></li>
+                <li><a asp-controller="About" asp-action="Index">About</a></li>
+                <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+                <li>
+                    <a asp-controller="Cart" asp-action="Index">
+                        Cart (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main" class="content">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gamer's Heaven. All rights reserved.</p>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/CartBadge.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
